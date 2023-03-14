@@ -15,8 +15,8 @@ const render = async () => {
         <div class="details">
           <p>${jsonData[i].name}</p>
           <div>
-          <i class="fa-regular fa-heart"></i>
-            <p>likes</p>
+          <i id="${i}" class="fa-regular fa-heart "></i>
+            <div class="likesContainer"></div>
           </div>
         </div>
         <button class="${i}">Comments</button>
