@@ -30,10 +30,6 @@ render();
 
 const showMore = async () => {
   let container = document.querySelector('.whole-container').children.length;
-  let showSpan = document.querySelector('.showSpan');
-  showSpan.innerHTML = container;
-
-  console.log(container);
   const jsonData = await getData();
   const wholeContainer = document.querySelector('.whole-container');
   let item = '';
@@ -55,11 +51,4 @@ const showMore = async () => {
   wholeContainer.insertAdjacentHTML('beforeend', item);
 };
 
-let showBtn = document.querySelector('.showBtn');
-
-showBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  showMore();
-});
-
-export { render };
+export { render, showMore };

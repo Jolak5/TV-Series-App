@@ -1,7 +1,10 @@
 import _, { method } from 'lodash';
 import './style.css';
-import { render } from './modules/homepage';
-import { postData, populateLikes, displayLikes } from './modules/likes';
+import { render, showMore } from './modules/homepage';
+import { displayLikes, populateLikes } from './modules/likes';
+import { countItems } from './modules/countItems';
+
+let showBtn = document.querySelector('.showBtn');
 
 document.addEventListener('click', (e) => {
   for (let i = 0; i < 6; i++) {
@@ -12,4 +15,11 @@ document.addEventListener('click', (e) => {
   }
 });
 
+showBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  showMore();
+  countItems();
+});
+
 populateLikes();
+countItems();
