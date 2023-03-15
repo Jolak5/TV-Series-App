@@ -24,6 +24,7 @@ nav {
   color: black;
   padding: 0 2%;
 }
+
 footer::before {
   display: block;
   clear: both;
@@ -68,10 +69,6 @@ h1 {
   gap: 10px;
 }
 
-.item > img {
-  width: 100%;
-}
-
 .details {
   display: flex;
   justify-content: space-between;
@@ -100,6 +97,10 @@ button:hover {
 img {
   transition: 0.3s ease-in-out;
   z-index: 0;
+}
+
+.item > img {
+  width: 100%;
 }
 
 img:hover {
