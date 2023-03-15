@@ -23,7 +23,6 @@ const getData = async () => {
 
 const displayLikes = async (i) => {
   const response = await getData();
-  console.log(response);
   const container = document.getElementsByClassName('likesContainer')[i];
   container.innerHTML = `<span>${response[i].likes}</span>`;
 };
