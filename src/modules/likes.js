@@ -17,7 +17,7 @@ const postData = async (i) => {
 
 const getData = async () => {
   const res = await fetch(
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LOf5L284gEd1pGlHG0AY/likes',
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LOf5L284gEd1pGlHG0AY/likes'
   );
   const response = await res.json();
   return response;
