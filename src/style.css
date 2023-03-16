@@ -25,6 +25,87 @@ nav {
   padding: 0 2%;
 }
 
+.popup-items {
+  width: 45%;
+  border-radius: 25px;
+  margin-left: 26%;
+  box-sizing: border-box;
+  padding: 0 5%;
+  border: 2px solid #ec5242;
+  backdrop-filter: blur(7px);
+}
+
+.show {
+  display: none;
+}
+
+.icon-container {
+  display: flex;
+}
+
+.x-icon {
+  padding-right: 4%;
+  padding-top: 2%;
+}
+
+.movie-title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.featured-image {
+  width: 40%;
+  padding: 2% 25%;
+}
+
+.properties {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.genre-list {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.summary {
+  text-align: center;
+  font-weight: 700;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 2%;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 10%;
+}
+
+.commented li {
+  list-style: none;
+}
+
+.input {
+  padding: 8px;
+  margin: 0.8rem 0;
+  border: 1px solid black;
+}
+
+.btn {
+  padding: 1%;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 1);
+  background-color: #ec5242;
+  color: #f0f2f5;
+  border-radius: 5px;
+  width: 115px;
+}
+
 footer::before {
   display: block;
   clear: both;
@@ -56,8 +137,8 @@ h1 {
   display: grid;
   grid-template-columns: 15% 15% 15% 15% 15% 15%;
   grid-template-rows: auto auto;
-  gap: 2%;
-  margin: 50px 0 100px;
+  gap: 5%;
+  margin-top: 5%;
   justify-content: center;
   padding: 0 10%;
   overflow: visible;
