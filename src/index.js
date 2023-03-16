@@ -49,7 +49,7 @@ document.addEventListener('click', async (event) => {
       }
 
       form.reset();
-          };
+    };
   }
 });
 
