@@ -1,4 +1,9 @@
 /* eslint-disable object-shorthand */
+let globalThis;
+const fetch = require('cross-fetch');
+
+globalThis.fetch = fetch;
+
 const getMovies = async () => {
   const request = await fetch('https://jsonplaceholder.typicode.com/todos/2');
   const response = await request.json();
