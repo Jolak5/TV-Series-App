@@ -1,4 +1,4 @@
-import mockCommentsCounter from '../../_mocks_/commentMock.js';
+import mockCommentsCounter from '../_mocks_/commentMock.js';
 
 describe.each([
   [[10, 15, 5, 2, 13, 14], 6],

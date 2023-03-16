@@ -1,3 +1,6 @@
+/**
+ * @jest-environment node
+ */
 const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;
