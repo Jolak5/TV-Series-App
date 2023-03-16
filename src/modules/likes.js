@@ -9,8 +9,7 @@ const postData = async (i) => {
       headers: { 'Content-Type': 'application/json' },
     },
   );
-  return res
-
+  return res;
 };
 
 const getData = async () => {
@@ -21,7 +20,7 @@ const getData = async () => {
   return response;
 };
 
-const populateLikes = async (i) => {
+const populateLikes = async () => {
   const response = await getData();
   for (let i = 0; i < 6; i++) {
     const container = document.getElementsByClassName('likesContainer')[i];
