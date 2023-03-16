@@ -3,7 +3,7 @@ const countItems = () => {
     const container = document.getElementsByClassName('item').length;
     const showSpan = document.querySelector('.showSpan');
     showSpan.innerHTML = container;
-  }, 2000);
+  }, 1000);
 };
 
 export default countItems;
