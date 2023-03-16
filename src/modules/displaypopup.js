@@ -1,28 +1,27 @@
-import { showComments } from "./showComments";
-import { getShowCommentData } from "./comments"
+import showComments from './showComments.js';
+import { getShowCommentData } from './comments.js';
+
 const populatePopup = async (id) => {
-    const response = await fetch(`https://api.tvmaze.com/shows/${id}`)
-    const result = await response.json();
-    return result
+  const response = await fetch(`https://api.tvmaze.com/shows/${id}`);
+  const result = await response.json();
+  return result;
 };
 
 const popupContainer = document.querySelector('.popup-section');
 let popup = '';
-export const showPopup = async (id) => {
-    let commentCount = 0;
-    const popupData = await populatePopup(id);
-    const commentedList = await showComments(id)
-    const displayComments = await getShowCommentData(id)
+const showPopup = async (id) => {
+  let commentCount = 0;
+  const popupData = await populatePopup(id);
+  const commentedList = await showComments(id);
+  const displayComments = await getShowCommentData(id);
 
-    if (displayComments.error) {
-        commentCount = 0
-    } else {
-        commentCount = displayComments.length
-    }
-
-    console.log(displayComments.length)
-    const genresList = popupData.genres.map((genre) => `<li>${genre}</li>`).join('');
-    popup += `
+  if (displayComments.error) {
+    commentCount = 0;
+  } else {
+    commentCount = displayComments.length;
+  }
+  const genresList = popupData.genres.map((genre) => `<li>${genre}</li>`).join('');
+  popup += `
         <div class="popup-items">
             <div class="icon-container">
                 <img src="${popupData.image.medium}" alt="" class="featured-image">
@@ -54,7 +53,6 @@ export const showPopup = async (id) => {
             </div>
       </div>
       `;
-      popupContainer.innerHTML = popup;
+  popupContainer.innerHTML = popup;
 };
-
-
+export default showPopup;

@@ -1,6 +1,5 @@
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LOf5L284gEd1pGlHG0AY/comments';
 
-
 const postShowCommentData = async (userName, comment, id) => {
   const response = await fetch(baseUrl, {
     method: 'POST',
@@ -9,11 +8,10 @@ const postShowCommentData = async (userName, comment, id) => {
     },
     body: JSON.stringify({
       username: userName,
-      comment: comment,
+      comment,
       item_id: id,
     }),
   });
-  console.log(response)
   return response;
 };
 

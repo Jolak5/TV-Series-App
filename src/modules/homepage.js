@@ -1,17 +1,16 @@
-
-
+/* eslint-disable no-plusplus */
 const getData = async () => {
-    const request = await fetch('https://api.tvmaze.com/shows');
-    const response = await request.json();
-    return response;
+  const request = await fetch('https://api.tvmaze.com/shows');
+  const response = await request.json();
+  return response;
 };
 
 const render = async () => {
-    const container = document.querySelector('.whole-container');
-    const jsonData = await getData();
-    let item = '';
-    for (let i = 0; i < 6; i++) {
-        item += `
+  const container = document.querySelector('.whole-container');
+  const jsonData = await getData();
+  let item = '';
+  for (let i = 0; i < 6; i++) {
+    item += `
       <div class="item">
           <img src="${jsonData[i].image.medium}" alt="" />
           <div class="details">
@@ -24,19 +23,19 @@ const render = async () => {
           <button class="comment-btn" id="btn-${jsonData[i].id}">Comments</button>
           <button class="${i}">Reservations</button>
         </div>`;
-    }
-    container.innerHTML = item;
+  }
+  container.innerHTML = item;
 };
 
 render();
 
 const showMore = async () => {
-    const container = document.querySelector('.whole-container').children.length;
-    const jsonData = await getData();
-    const wholeContainer = document.querySelector('.whole-container');
-    let item = '';
-    for (let i = container; i < container + 6; i++) {
-        item += `
+  const container = document.querySelector('.whole-container').children.length;
+  const jsonData = await getData();
+  const wholeContainer = document.querySelector('.whole-container');
+  let item = '';
+  for (let i = container; i < container + 6; i++) {
+    item += `
     <div class="item">
         <img src="${jsonData[i].image.medium}" alt="" />
         <div class="details">
@@ -49,8 +48,8 @@ const showMore = async () => {
         <button class="comment-btn" id="btn-${jsonData[i].id}">Comments</button>
         <button class="${i}">Reservations</button>
       </div>`;
-    }
-    wholeContainer.insertAdjacentHTML('beforeend', item);
+  }
+  wholeContainer.insertAdjacentHTML('beforeend', item);
 };
 
 export { render, showMore };
