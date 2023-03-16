@@ -37,6 +37,4 @@ const populateLikes = async (i) => {
   }
 };
 
-export {
-  getData, displayLikes, populateLikes, postData,
-};
+export { displayLikes, populateLikes, postData };
