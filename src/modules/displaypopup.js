@@ -28,7 +28,7 @@ export const showPopup = async (id) => {
                 <h3 class="title">Comments</h3>
                 <div class="comments">
                 
-                   <ul>
+                   <ul class="commented">
                    ${commentedList}
                    </ul> 
                 </div>

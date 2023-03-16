@@ -54,7 +54,7 @@ nav {
 
 .x-icon {
   padding-right: 2%;
-  top: 0;
+  padding-top: 2%;
 }
 
 .movie-title {
@@ -97,6 +97,11 @@ nav {
   padding: 2% 10%;
 }
 
+.commented li {
+  list-style: none;
+
+}
+
 .input {
   padding: 8px;
   margin: 0.8rem 0;
@@ -108,11 +113,7 @@ nav {
   background-color: #ec5242;
   color: #f0f2f5;
   border-radius: 5px;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  width: 115px;
 }
 
 footer::before {
