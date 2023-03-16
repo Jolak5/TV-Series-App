@@ -1,29 +1,31 @@
-const getData = async () => {
-  const request = await fetch('https://api.tvmaze.com/shows');
-  const response = await request.json();
-  return response;
-};
 
-const render = async () => {
-  const container = document.querySelector('.whole-container');
-  const jsonData = await getData();
-  let item = '';
-  for (let i = 0; i < 6; i++) {
-    item += `
-    <div class="item">
-        <img src="${jsonData[i].image.medium}" alt="" />
-        <div class="details">
-          <p>${jsonData[i].name}</p>
-          <div>
-          <i id="${i}" class="fa-regular fa-heart "></i>
-            <div class="likesContainer"></div>
+
+const getData = async () => {
+    const request = await fetch('https://api.tvmaze.com/shows');
+    const response = await request.json();
+    return response;
+  };
+  
+  const render = async () => {
+    const container = document.querySelector('.whole-container');
+    const jsonData = await getData();
+    let item = '';
+    for (let i = 0; i < 6; i++) {
+      item += `
+      <div class="item">
+          <img src="${jsonData[i].image.medium}" alt="" />
+          <div class="details">
+            <p>${jsonData[i].name}</p>
+            <div>
+            <i id="${i}" class="fa-regular fa-heart "></i>
+              <div class="likesContainer"></div>
+            </div>
           </div>
-        </div>
-        <button class="${i}">Comments</button>
-        <button class="${i}">Reservations</button>
-      </div>`;
-  }
-  container.innerHTML = item;
+          <button class="comment-btn" id="btn-${jsonData[i].id}">Comments</button>
+          <button class="${i}">Reservations</button>
+        </div>`;
+    }
+    container.innerHTML = item;
 };
 
 render();
@@ -48,7 +50,7 @@ const showMore = async () => {
             <div class="likesContainer"></div>
           </div>
         </div>
-        <button class="${i}">Comments</button>
+        <button class="comment-btn" id="btn-${jsonData[i].id}">Comments</button>
         <button class="${i}">Reservations</button>
       </div>`;
   }
