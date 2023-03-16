@@ -1,4 +1,5 @@
 import { showComments } from "./showComments";
+import { getShowCommentData } from "./comments"
 const populatePopup = async (id) => {
     const response = await fetch(`https://api.tvmaze.com/shows/${id}`)
     const result = await response.json();
@@ -8,8 +9,18 @@ const populatePopup = async (id) => {
 const popupContainer = document.querySelector('.popup-section');
 let popup = '';
 export const showPopup = async (id) => {
+    let commentCount = 0;
     const popupData = await populatePopup(id);
     const commentedList = await showComments(id)
+    const displayComments = await getShowCommentData(id)
+
+    if (displayComments.error) {
+        commentCount = 0
+    } else {
+        commentCount = displayComments.length
+    }
+
+    console.log(displayComments.length)
     const genresList = popupData.genres.map((genre) => `<li>${genre}</li>`).join('');
     popup += `
         <div class="popup-items">
@@ -25,7 +36,7 @@ export const showPopup = async (id) => {
             </div>
             <p class="summary">Summary: ${popupData.summary}</p>
             <div id="comment-container">
-                <h3 class="title">Comments</h3>
+                <h3 class="title">Comments: ${commentCount} </h3>
                 <div class="comments">
                 
                    <ul class="commented">
