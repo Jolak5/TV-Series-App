@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-plusplus */
 const postData = async (i) => {
   const res = await fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LOf5L284gEd1pGlHG0AY/likes',
@@ -7,7 +9,7 @@ const postData = async (i) => {
         item_id: i,
       }),
       headers: { 'Content-Type': 'application/json' },
-    }
+    },
   );
   const request = await res.text();
   return request;
@@ -15,7 +17,7 @@ const postData = async (i) => {
 
 const getData = async () => {
   const res = await fetch(
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LOf5L284gEd1pGlHG0AY/likes'
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LOf5L284gEd1pGlHG0AY/likes',
   );
   const response = await res.json();
   return response;
@@ -35,4 +37,4 @@ const populateLikes = async (i) => {
   }
 };
 
-export { getData, displayLikes, populateLikes, postData };
+export { displayLikes, populateLikes, postData };
