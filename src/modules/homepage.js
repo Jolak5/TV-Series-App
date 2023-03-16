@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const getData = async () => {
   const request = await fetch('https://api.tvmaze.com/shows');
   const response = await request.json();
@@ -29,7 +30,7 @@ const render = async () => {
 render();
 
 const showMore = async () => {
-  let container = document.querySelector('.whole-container').children.length;
+  const container = document.querySelector('.whole-container').children.length;
   const jsonData = await getData();
   const wholeContainer = document.querySelector('.whole-container');
   let item = '';

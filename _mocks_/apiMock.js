@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 const getMovies = async () => {
   const request = await fetch('https://jsonplaceholder.typicode.com/todos/2');
   const response = await request.json();

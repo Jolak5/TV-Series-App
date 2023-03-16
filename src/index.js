@@ -1,10 +1,11 @@
-import _, { method } from 'lodash';
+/* eslint-disable no-plusplus */
+// import _, { method } from 'lodash';
 import './style.css';
-import { render, showMore } from './modules/homepage';
-import { displayLikes, populateLikes } from './modules/likes';
-import { countItems } from './modules/countItems';
+import { showMore } from './modules/homepage.js';
+import { displayLikes, populateLikes, postData } from './modules/likes.js';
+import countItems from './modules/countItems.js';
 
-let showBtn = document.querySelector('.showBtn');
+const showBtn = document.querySelector('.showBtn');
 
 document.addEventListener('click', (e) => {
   for (let i = 0; i < 6; i++) {
