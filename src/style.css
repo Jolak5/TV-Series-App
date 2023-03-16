@@ -33,7 +33,6 @@ nav {
   padding: 0 5%;
   border: 2px solid #ec5242;
   backdrop-filter: blur(7px);
-
 }
 
 .show {
@@ -42,7 +41,6 @@ nav {
 
 .icon-container {
   display: flex;
-  
 }
 
 .x-icon {
