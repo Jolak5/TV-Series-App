@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 const getData = async () => {
   const request = await fetch('https://api.tvmaze.com/shows');
   const response = await request.json();

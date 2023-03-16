@@ -1,5 +1,3 @@
-/* eslint-disable no-plusplus */
-// import _, { method } from 'lodash';
 import './style.css';
 import showPopup from './modules/displaypopup.js';
 import { postShowCommentData } from './modules/comments.js';
@@ -52,8 +50,6 @@ document.addEventListener('click', async (event) => {
     };
   }
 });
-
-populateLikes();
 
 showBtn.addEventListener('click', (e) => {
   e.preventDefault();
