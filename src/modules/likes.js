@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-plusplus */
 const postData = async (i) => {
   const res = await fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LOf5L284gEd1pGlHG0AY/likes',
@@ -11,8 +9,8 @@ const postData = async (i) => {
       headers: { 'Content-Type': 'application/json' },
     },
   );
-  const request = await res.text();
-  return request;
+  return res
+
 };
 
 const getData = async () => {
@@ -23,12 +21,6 @@ const getData = async () => {
   return response;
 };
 
-const displayLikes = async (i) => {
-  const response = await getData();
-  const container = document.getElementsByClassName('likesContainer')[i];
-  container.innerHTML = `<span>${response[i].likes}</span>`;
-};
-
 const populateLikes = async (i) => {
   const response = await getData();
   for (let i = 0; i < 6; i++) {
@@ -37,4 +29,4 @@ const populateLikes = async (i) => {
   }
 };
 
-export { displayLikes, populateLikes, postData };
+export { populateLikes, postData, getData };

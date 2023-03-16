@@ -15,8 +15,8 @@ const render = async () => {
           <div class="details">
             <p>${jsonData[i].name}</p>
             <div>
-            <i id="${i}" class="fa-regular fa-heart "></i>
-              <div class="likesContainer"></div>
+                <i id="${jsonData[i].id}" class="fa-regular fa-heart"></i>
+                <div class="likesContainer"></div>
             </div>
           </div>
           <button class="comment-btn" id="btn-${jsonData[i].id}">Comments</button>
@@ -40,7 +40,7 @@ const showMore = async () => {
         <div class="details">
           <p>${jsonData[i].name}</p>
           <div>
-          <i id="${i}" class="fa-regular fa-heart "></i>
+            <i id="${jsonData[i].id}" class="fa-regular fa-heart"></i>
             <div class="likesContainer"></div>
           </div>
         </div>
