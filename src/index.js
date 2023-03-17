@@ -52,7 +52,7 @@ document.addEventListener('click', async (event) => {
     };
   }
 
-  if (event.target.className === 'fa-solid fa-x'){
+  if (event.target.className === 'fa-solid fa-x') {
     homepage.style.display = 'grid';
     showMovieDetails.style.display = 'none';
   }
