@@ -21,6 +21,7 @@ const showPopup = async (id) => {
     commentCount = displayComments.length;
   }
   const genresList = popupData.genres.map((genre) => `<li>${genre}</li>`).join('');
+  popup = '';
   popup += `
         <div class="popup-items">
             <div class="icon-container">

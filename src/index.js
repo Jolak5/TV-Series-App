@@ -13,16 +13,16 @@ const showMovieDetails = document.querySelector('.popup-section');
 document.addEventListener('click', async (event) => {
   event.preventDefault();
   let commentId;
-  if (event.target.className === 'fa-regular fa-heart') {
-    commentId = event.target.id;
-    const commentIndex = Number(commentId) - 1;
-    const postLike = await postData(commentIndex);
-    if (postLike.status === 201) {
-      const response = await getData();
-      const container = document.getElementsByClassName('likesContainer')[commentIndex];
-      container.innerHTML = `<span>${response[commentIndex].likes}</span>`;
-    }
-  }
+//   if (event.target.className === 'fa-regular fa-heart') {
+//     commentId = event.target.id;
+//     const commentIndex = Number(commentId) - 1;
+//     const postLike = await postData(commentIndex);
+//     if (postLike.status === 201) {
+//       const response = await getData();
+//       const container = document.getElementsByClassName('likesContainer')[commentIndex];
+//       container.innerHTML = `<span>${response[commentIndex].likes}</span>`;
+//     }
+//   }
 
   if (event.target.className === 'comment-btn') {
     commentId = event.target.id.split('-')[1];
@@ -50,6 +50,11 @@ document.addEventListener('click', async (event) => {
 
       form.reset();
     };
+  }
+
+  if (event.target.className === 'fa-solid fa-x'){
+    homepage.style.display = 'grid';
+    showMovieDetails.style.display = 'none';
   }
 });
 
