@@ -11,7 +11,6 @@ const homepage = document.querySelector('.whole-container');
 const showMovieDetails = document.querySelector('.popup-section');
 
 document.addEventListener('click', async (event) => {
-  event.preventDefault();
   let commentId;
   if (event.target.className === 'fa-regular fa-heart') {
     commentId = event.target.id;
