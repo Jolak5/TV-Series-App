@@ -1,8 +1,4 @@
-/* eslint-disable object-shorthand */
-let globalThis;
 const fetch = require('cross-fetch');
-
-globalThis.fetch = fetch;
 
 const getMovies = async () => {
   const request = await fetch('https://jsonplaceholder.typicode.com/todos/2');
@@ -15,8 +11,8 @@ const postMovies = async (userID, title, completed) => {
     method: 'POST',
     body: JSON.stringify({
       userId: userID,
-      title: title,
-      completed: completed,
+      title,
+      completed,
     }),
     headers: { 'Content-Type': 'application/json' },
   });
