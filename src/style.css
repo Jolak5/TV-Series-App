@@ -1,0 +1,190 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: orange;
+  z-index: 1;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  padding: 0 2%;
+}
+
+.popup-items {
+  width: 45%;
+  border-radius: 25px;
+  margin-left: 26%;
+  box-sizing: border-box;
+  padding: 0 5%;
+  border: 2px solid #ec5242;
+  backdrop-filter: blur(7px);
+}
+
+.show {
+  display: none;
+}
+
+.icon-container {
+  display: flex;
+}
+
+.x-icon {
+  padding-right: 4%;
+  padding-top: 2%;
+}
+
+.movie-title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.featured-image {
+  width: 40%;
+  padding: 2% 25%;
+}
+
+.properties {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.genre-list {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.summary {
+  text-align: center;
+  font-weight: 700;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 2%;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 10%;
+}
+
+.commented li {
+  list-style: none;
+}
+
+.input {
+  padding: 8px;
+  margin: 0.8rem 0;
+  border: 1px solid black;
+}
+
+.btn {
+  padding: 1%;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 1);
+  background-color: #ec5242;
+  color: #f0f2f5;
+  border-radius: 5px;
+  width: 115px;
+}
+
+footer::before {
+  display: block;
+  clear: both;
+  height: 100px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  border: 2px solid black;
+  width: 99.7%;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 100px;
+  background-color: orange;
+}
+
+.header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.whole-container {
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  grid-template-rows: auto auto;
+  gap: 5%;
+  margin-top: 5%;
+  justify-content: center;
+  padding: 0 10%;
+  overflow: visible;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details > p {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.fa-regular {
+  cursor: pointer;
+}
+
+button {
+  background-color: orange;
+  padding: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(48, 32, 1);
+  color: white;
+}
+
+img {
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.item > img {
+  width: 100%;
+}
+
+img:hover {
+  -webkit-transform: scale(1);
+  transform: scale(0.8);
+}
